@@ -1,0 +1,19 @@
+@"
+__pycache__/
+*.pyc
+.pytest_cache/
+venv/
+.venv/
+.ipynb_checkpoints/
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+.vscode/
+*.joblib
+*.pkl
+*.log
+data/raw/
+gitignore_backup/
+"@ | Set-Content -Encoding utf8 ".gitignore"
