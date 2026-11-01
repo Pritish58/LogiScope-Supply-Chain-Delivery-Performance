@@ -1,0 +1,152 @@
+column,value,count,percentage
+Type,DEBIT,69295,38.387
+Type,TRANSFER,49883,27.633
+Type,PAYMENT,41725,23.114
+Type,CASH,19616,10.866
+Delivery Status,Late delivery,98977,54.829
+Delivery Status,Advance shipping,41592,23.04
+Delivery Status,Shipping on time,32196,17.835
+Delivery Status,Shipping canceled,7754,4.295
+Category Name,Cleats,24551,13.6
+Category Name,Men's Footwear,22246,12.323
+Category Name,Women's Apparel,21035,11.653
+Category Name,Indoor/Outdoor Games,19298,10.69
+Category Name,Fishing,17325,9.597
+Category Name,Water Sports,15540,8.609
+Category Name,Camping & Hiking,13729,7.605
+Category Name,Cardio Equipment,12487,6.917
+Category Name,Shop By Sport,10984,6.085
+Category Name,Electronics,3156,1.748
+Customer City,Caguas,66770,36.988
+Customer City,Chicago,3885,2.152
+Customer City,Los Angeles,3417,1.893
+Customer City,Brooklyn,3412,1.89
+Customer City,New York,1816,1.006
+Customer City,Philadelphia,1577,0.874
+Customer City,Bronx,1500,0.831
+Customer City,San Diego,1437,0.796
+Customer City,Miami,1314,0.728
+Customer City,Houston,1297,0.718
+Customer Country,EE. UU.,111146,61.57
+Customer Country,Puerto Rico,69373,38.43
+Customer Fname,Mary,65150,36.09
+Customer Fname,James,1835,1.017
+Customer Fname,Robert,1759,0.974
+Customer Fname,Michael,1680,0.931
+Customer Fname,David,1625,0.9
+Customer Fname,John,1446,0.801
+Customer Fname,William,1365,0.756
+Customer Fname,Joseph,1117,0.619
+Customer Fname,Jennifer,1033,0.572
+Customer Fname,Richard,1032,0.572
+Customer Lname,Smith,64104,35.511
+Customer Lname,Johnson,989,0.548
+Customer Lname,Brown,909,0.504
+Customer Lname,Williams,869,0.481
+Customer Lname,Jones,859,0.476
+Customer Lname,Garcia,724,0.401
+Customer Lname,Wilson,675,0.374
+Customer Lname,Taylor,661,0.366
+Customer Lname,Davis,640,0.355
+Customer Lname,Moore,599,0.332
+Customer Segment,Consumer,93504,51.797
+Customer Segment,Corporate,54789,30.351
+Customer Segment,Home Office,32226,17.852
+Customer State,PR,69373,38.43
+Customer State,CA,29223,16.188
+Customer State,NY,11327,6.275
+Customer State,TX,9103,5.043
+Customer State,IL,7631,4.227
+Customer State,FL,5456,3.022
+Customer State,OH,4095,2.268
+Customer State,PA,3824,2.118
+Customer State,MI,3804,2.107
+Customer State,NJ,3191,1.768
+Customer Street,9126 Wishing Expressway,122,0.068
+Customer Street,4388 Burning Goose Ridge,117,0.065
+Customer Street,4720 Noble Hills Wynd,116,0.064
+Customer Street,2878 Hazy Wagon  Thicket,113,0.063
+Customer Street,398 Emerald Grove,109,0.06
+Customer Street,3593 Blue Brook Acres,108,0.06
+Customer Street,2210 Merry Leaf Row,107,0.059
+Customer Street,6289 Rocky Way,107,0.059
+Customer Street,2585 Silent Autumn Landing,105,0.058
+Customer Street,141 Dewy Plaza,103,0.057
+Department Name,Fan Shop,66861,37.038
+Department Name,Apparel,48998,27.143
+Department Name,Golf,33220,18.402
+Department Name,Footwear,14525,8.046
+Department Name,Outdoors,9686,5.366
+Department Name,Fitness,2479,1.373
+Department Name,Discs Shop,2026,1.122
+Department Name,Technology,1465,0.812
+Department Name,Pet Shop,492,0.273
+Department Name,Book Shop,405,0.224
+Market,LATAM,51594,28.581
+Market,Europe,50252,27.838
+Market,Pacific Asia,41260,22.856
+Market,USCA,25799,14.292
+Market,Africa,11614,6.434
+Order City,Santo Domingo,2211,1.225
+Order City,New York City,2202,1.22
+Order City,Los Angeles,1845,1.022
+Order City,Tegucigalpa,1783,0.988
+Order City,Managua,1682,0.932
+Order City,Mexico City,1484,0.822
+Order City,Manila,1381,0.765
+Order City,Philadelphia,1302,0.721
+Order City,San Francisco,1297,0.718
+Order City,London,1187,0.658
+Order Country,Estados Unidos,24840,13.76
+Order Country,Francia,13222,7.324
+Order Country,México,13172,7.297
+Order Country,Alemania,9564,5.298
+Order Country,Australia,8497,4.707
+Order Country,Brasil,7987,4.424
+Order Country,Reino Unido,7302,4.045
+Order Country,China,5758,3.19
+Order Country,Italia,4989,2.764
+Order Country,India,4783,2.65
+Order Region,Central America,28341,15.7
+Order Region,Western Europe,27109,15.017
+Order Region,South America,14935,8.273
+Order Region,Oceania,10148,5.622
+Order Region,Northern Europe,9792,5.424
+Order Region,Southeast Asia,9539,5.284
+Order Region,Southern Europe,9431,5.224
+Order Region,Caribbean,8318,4.608
+Order Region,West of USA ,7993,4.428
+Order Region,South Asia,7731,4.283
+Order State,Inglaterra,6722,3.724
+Order State,California,4966,2.751
+Order State,Isla de Francia,4580,2.537
+Order State,Renania del Norte-Westfalia,3303,1.83
+Order State,San Salvador,3055,1.692
+Order State,Nueva York,2753,1.525
+Order State,Distrito Federal,2559,1.418
+Order State,Texas,2446,1.355
+Order State,Nueva Gales del Sur,2370,1.313
+Order State,Santo Domingo,2211,1.225
+Order Status,COMPLETE,59491,32.956
+Order Status,PENDING_PAYMENT,39832,22.065
+Order Status,PROCESSING,21902,12.133
+Order Status,PENDING,20227,11.205
+Order Status,CLOSED,19616,10.866
+Order Status,ON_HOLD,9804,5.431
+Order Status,SUSPECTED_FRAUD,4062,2.25
+Order Status,CANCELED,3692,2.045
+Order Status,PAYMENT_REVIEW,1893,1.049
+Product Name,Perfect Fitness Perfect Rip Deck,24515,13.58
+Product Name,Nike Men's CJ Elite 2 TD Football Cleat,22246,12.323
+Product Name,Nike Men's Dri-FIT Victory Golf Polo,21035,11.653
+Product Name,O'Brien Men's Neoprene Life Vest,19298,10.69
+Product Name,Field & Stream Sportsman 16 Gun Fire Safe,17325,9.597
+Product Name,Pelican Sunstream 100 Kayak,15500,8.586
+Product Name,Diamondback Women's Serene Classic Comfort Bi,13729,7.605
+Product Name,Nike Men's Free 5.0+ Running Shoe,12169,6.741
+Product Name,Under Armour Girls' Toddler Spine Surge Runni,10617,5.881
+Product Name,Fighting video games,838,0.464
+Shipping Mode,Standard Class,107752,59.69
+Shipping Mode,Second Class,35216,19.508
+Shipping Mode,First Class,27814,15.408
+Shipping Mode,Same Day,9737,5.394

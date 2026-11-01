@@ -1,0 +1,17 @@
+pandas
+numpy
+scipy
+matplotlib
+seaborn
+plotly
+scikit-learn
+joblib
+statsmodels
+shap
+fastapi
+uvicorn[standard]
+python-multipart
+python-dotenv
+openpyxl
+pydantic
+requests

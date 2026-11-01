@@ -1,0 +1,5 @@
+shipping_mode,record_count,average_delay_days,median_delay_days
+First Class,27814,1.0,1.0
+Same Day,9737,0.4782787306151792,0.0
+Second Class,35216,1.9908280327124035,2.0
+Standard Class,107752,-0.004092731457420744,0.0
