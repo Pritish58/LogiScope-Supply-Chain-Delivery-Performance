@@ -1,275 +1,126 @@
-# LogiScope — Delivery Performance & Logistics Analytics
+# 🚚 LogiScope – Supply Chain Delivery Performance & Intelligence
 
-A data analytics and machine learning project designed to analyze delivery performance, shipping efficiency, and late-delivery risk using a logistics dataset.
+### Transforming Logistics Data into Actionable Supply Chain Insights
 
-## 1. Project Overview
+LogiScope is a data-driven supply chain analytics platform designed to analyze delivery performance, identify shipment delays, evaluate logistics efficiency, and provide meaningful insights into supply chain operations.
 
-LogiScope is a supply chain analytics dashboard that helps users understand delivery outcomes, compare shipping methods, and examine existing late-delivery risk labels.
-
-The project combines data preprocessing, exploratory data analysis (EDA), machine learning experimentation, a FastAPI backend, and a React frontend to present logistics information through an interactive dashboard.
-
-## 2. Objectives
-
-* Analyze delivery outcomes across the dataset.
-* Compare actual shipping duration with scheduled shipping duration.
-* Identify patterns associated with late deliveries.
-* Compare shipping performance across shipping modes.
-* Examine the distribution of existing late-delivery risk labels.
-* Present key performance indicators through a dashboard.
-* Provide a foundation for further logistics analytics and predictive modeling.
-
-## 3. Technology Stack
-
-### Data Analysis and Machine Learning
-
-* Python
-* Pandas
-* NumPy
-* Scikit-learn
-* Matplotlib
-* Seaborn
-
-### Backend
-
-* FastAPI
-* Uvicorn
-
-### Frontend
-
-* React
-* JavaScript
-* Vite
-* CSS
-
-### Testing
-
-* Pytest
-* FastAPI TestClient
-
-## 4. Project Structure
-
-```text
-Delivery/
-├── backend/
-│   ├── __init__.py
-│   └── main.py
-├── data/
-│   ├── raw/
-│   │   └── APL_Logistics.csv
-│   ├── interim/
-│   └── processed/
-│       ├── logistics_cleaned.csv
-│       └── logistics_features.csv
-├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── app.jsx
-│   │   ├── main.jsx
-│   │   └── style.css
-│   ├── index.html
-│   └── package.json
-├── models/
-├── notebooks/
-├── reports/
-├── src/
-│   ├── analysis/
-│   ├── data/
-│   ├── features/
-│   └── ml/
-├── tests/
-│   └── test_api.py
-├── requirements.txt
-└── README.md
-```
-
-*Note: This structure describes the main project components. Some files may differ depending on your current implementation.*
-
-## 5. Dataset
-
-The project uses the APL Logistics CSV dataset.
-
-The original dataset contains **180,519 records and 40 columns**.
-
-The processed feature dataset contains additional engineered columns for delivery analysis.
-
-Important fields include:
-
-* Delivery status
-* Late-delivery risk
-* Scheduled shipping duration
-* Actual shipping duration
-* Shipping mode
-* Market and regional information
-* Customer and product-related attributes
-
-### Data Quality Findings
-
-The initial dataset audit identified:
-
-* Total records: 180,519
-* Exact duplicate rows: 0
-* Missing values: 11
-
-The missing values and data quality issues should be handled according to the preprocessing rules documented in the project.
-
-## 6. Dashboard Features
-
-### Overview
-
-Displays the overall dataset size and distribution of delivery outcomes.
-
-### Delivery Analysis
-
-Provides insights into delivery status and shipping-duration performance.
-
-### Shipping Efficiency
-
-Compares shipping-duration patterns across shipping modes.
-
-### Risk Analysis
-
-Summarizes the dataset's existing late-delivery risk labels.
-
-## 7. Data Processing Workflow
-
-The project follows this workflow:
-
-1. Dataset audit
-2. Data cleaning
-3. Feature engineering
-4. Exploratory data analysis
-5. Baseline machine learning experiment
-6. Backend API development
-7. Dashboard integration
-8. API testing
-9. Project documentation
-
-## 8. Installation and Setup
-
-### Prerequisites
-
-Install the following software:
-
-* Python
-* Node.js and npm
-* Visual Studio Code
-
-### Step 1: Install Python Dependencies
-
-Open a terminal in the project root directory.
-
-```bash
-py -m pip install -r requirements.txt
-```
-
-### Step 2: Start the Backend
-
-From the project root, run:
-
-```bash
-py -m uvicorn backend.main:app --reload
-```
-
-The backend should be available at:
-
-`http://127.0.0.1:8000`
-
-Interactive API documentation:
-
-`http://127.0.0.1:8000/docs`
-
-### Step 3: Start the Frontend
-
-Open a second terminal:
-
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-Open the local URL displayed by Vite, usually:
-
-`http://localhost:5173`
-
-Keep both backend and frontend terminals running while using the dashboard.
-
-## 9. API Endpoints
-
-The current backend includes the following endpoints:
-
-| Method | Endpoint             | Purpose                          |
-| ------ | -------------------- | -------------------------------- |
-| GET    | `/`                  | API home                         |
-| GET    | `/health`            | Health check                     |
-| GET    | `/summary`           | High-level dataset summary       |
-| GET    | `/shipping-modes`    | Shipping-mode comparison         |
-| GET    | `/risk-distribution` | Existing risk-label distribution |
-
-Use `/docs` to inspect and test the available endpoints.
-
-## 10. Machine Learning
-
-The project includes a baseline Random Forest classification experiment for late-delivery risk.
-
-The initial experiment reported:
-
-* Accuracy: approximately 78.13%
-* Precision: approximately 90.43%
-* Recall: approximately 67.23%
-* F1-score: approximately 77.12%
-
-These metrics describe the baseline experiment, not a validated operational early-warning system.
-
-Before using the model for early prediction, verify that:
-
-* All predictor features are available when the prediction is made.
-* Outcome-related features do not leak information about the target.
-* Repeated orders are handled appropriately during validation.
-* Performance is evaluated on a suitable holdout strategy.
-
-In particular, actual shipping duration and final delivery status should not be used as predictors when the intended prediction occurs before the delivery outcome is known.
-
-## 11. Testing
-
-API tests are available in the `tests` directory.
-
-Run them from the project root:
-
-```bash
-py -m pytest tests/test_api.py -v
-```
-
-The current API test run completed successfully with **5 passing tests**.
-
-## 12. Limitations
-
-* The dataset may contain multiple records associated with the same order.
-* The recorded risk label reflects the supplied dataset and requires further validation before operational use.
-* The absence of suitable timestamps limits time-based trend analysis.
-* Baseline machine learning performance does not guarantee reliable future predictions.
-* The analysis is limited to the fields available in the supplied dataset.
-
-## 13. Future Improvements
-
-* Introduce group-aware or time-aware model validation where supported by the data.
-* Improve data quality monitoring.
-* Add automated preprocessing tests.
-* Develop more detailed shipping-mode and regional comparisons.
-* Add model explainability and feature-importance analysis.
-* Improve dashboard filtering and export capabilities.
-* Prepare deployment and monitoring documentation.
-
-## 14. Conclusion
-
-LogiScope combines logistics data analysis, baseline machine learning, API development, and interactive visualization in a single project.
-
-It provides a foundation for understanding delivery performance and shipping efficiency while identifying the validation requirements that must be addressed before deploying a predictive risk model.
+Built using **Python, Streamlit, Pandas, Plotly, and Machine Learning technologies**, the platform transforms raw logistics data into interactive visualizations and an intuitive analytics dashboard.
 
 ---
 
-**Project:** LogiScope — Delivery Performance & Logistics Analytics
-**Dataset:** APL Logistics CSV dataset
-**Backend:** FastAPI
-**Frontend:** React and Vite
-**Language:** Python and JavaScript
+## 📌 Table of Contents
+
+- [Overview](#-overview)
+- [Problem Statement](#-problem-statement)
+- [Project Objectives](#-project-objectives)
+- [Key Features](#-key-features)
+- [Dashboard Modules](#-dashboard-modules)
+- [Technology Stack](#-technology-stack)
+- [Dataset Description](#-dataset-description)
+- [Project Architecture](#-project-architecture)
+- [Installation and Setup](#-installation-and-setup)
+- [Running the Application](#-running-the-application)
+- [Analytical Methodology](#-analytical-methodology)
+- [Future Enhancements](#-future-enhancements)
+- [Deployment](#-deployment)
+- [Author](#-author)
+
+---
+
+## 📖 Overview
+
+Supply chain management involves multiple interconnected processes, including order processing, shipment scheduling, transportation, and final delivery.
+
+Organizations often struggle to identify delivery bottlenecks, understand regional performance differences, and monitor shipment delays across different logistics operations.
+
+**LogiScope** addresses these challenges by providing an interactive analytics platform that converts logistics datasets into meaningful operational insights.
+
+The platform allows users to:
+
+- Monitor overall shipment performance.
+- Analyze delayed, early, and on-time deliveries.
+- Compare shipping methods.
+- Evaluate regional logistics performance.
+- Understand customer segment delivery patterns.
+- Explore individual shipment records.
+- Identify existing late-delivery risk patterns.
+
+The application provides a centralized environment for exploring logistics performance through interactive dashboards.
+
+---
+
+## 🎯 Problem Statement
+
+Inefficient logistics operations can lead to delayed deliveries, increased operational costs, reduced customer satisfaction, and poor supply chain visibility.
+
+Traditional reporting methods often make it difficult to:
+
+1. Monitor delivery performance across large datasets.
+2. Identify shipping methods associated with higher delay rates.
+3. Compare logistics performance across different regions.
+4. Understand delivery patterns across customer segments.
+5. Identify potential operational inefficiencies.
+
+LogiScope aims to simplify these challenges through centralized data analysis, interactive visualizations, and data-driven decision support.
+
+---
+
+## 🎯 Project Objectives
+
+- Develop an interactive supply chain analytics dashboard.
+- Perform data cleaning and preprocessing.
+- Analyze shipment delivery performance.
+- Identify patterns associated with delivery delays.
+- Compare shipping modes and regional performance.
+- Evaluate customer segment delivery behavior.
+- Provide shipment-level data exploration.
+- Present logistics insights through interactive visualizations.
+
+---
+
+## 🚀 Key Features
+
+### 1. Interactive Analytics Dashboard
+A centralized dashboard displaying important logistics performance indicators.
+
+### 2. Delivery Performance Monitoring
+Analyze early, delayed, and on-time shipments to understand overall delivery performance.
+
+### 3. Delay Risk Analysis
+Explore existing late-delivery risk labels and delay severity patterns.
+
+### 4. Shipping Mode Intelligence
+Compare logistics performance across different shipping methods.
+
+### 5. Regional Intelligence
+Evaluate shipment performance across different geographical regions and markets.
+
+### 6. Customer Segment Analysis
+Understand delivery performance across different customer segments.
+
+### 7. Shipment Record Explorer
+Search, filter, inspect, and download shipment records.
+
+### 8. Dynamic Filtering
+Filter analytical results using:
+
+- Shipping Mode
+- Order Region
+- Market
+- Customer Segment
+- Order Country
+- Delivery Outcome
+
+### 9. Data Export
+Export filtered shipment records into CSV format for additional analysis.
+
+---
+
+## 📊 Dashboard Modules
+
+LogiScope contains seven major analytical modules.
+
+| Module | Description |
+|---|---|
+| Overview | Displays shipment KPIs and overall delivery performance. |
+| Delivery Performance | Analyzes early, delayed,
